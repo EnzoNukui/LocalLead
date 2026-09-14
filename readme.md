@@ -24,10 +24,6 @@ O MVP foi desenhado para uma leitura rápida no celular: a pessoa escolhe uma li
 </p>
 <p align="center"><sub>As duas linhas disponíveis no MVP, cada uma com sua identidade visual.</sub></p>
 
-<p align="center">
-  <img src="mvp_locallead/front-end/assets/images/imagem_trem_luz.png" alt="Imagem de trem usada na identidade visual do aplicativo" width="540">
-</p>
-
 ## Navegue pelo projeto
 
 | Quero… | Acesse |
