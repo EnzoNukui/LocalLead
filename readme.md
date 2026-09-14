@@ -107,21 +107,29 @@ Por exemplo, com a API local em execução, `http://localhost:3000/lotacao?linha
 
 O site conta a história do projeto: o desafio de viajar com pouca previsibilidade, a proposta de solução, a apresentação do aplicativo e os integrantes. Foi construído com **HTML, CSS e JavaScript**, com páginas e estilos responsivos.
 
-<p align="center">
-  <img src="site-institucional/assets/img/apresentacao/home-desktop.png" alt="Página inicial do site institucional LocalLead" width="230">
-  <img src="site-institucional/assets/img/apresentacao/solucao-desktop.png" alt="Página da solução no site institucional" width="230">
-  <img src="site-institucional/assets/img/apresentacao/aplicativo-desktop.png" alt="Página de apresentação do aplicativo" width="230">
-</p>
-<p align="center"><sub>Início · Solução · Aplicativo</sub></p>
+### Página inicial
 
-<p align="center">
-  <img src="site-institucional/assets/img/apresentacao/sobre-desktop.png" alt="Página Sobre do site institucional" width="230">
-  <img src="site-institucional/assets/img/apresentacao/integrantes-desktop.png" alt="Página Integrantes do site institucional" width="230">
-  <img src="site-institucional/assets/img/apresentacao/home-mobile.png" alt="Versão mobile do site institucional" width="160">
-</p>
-<p align="center"><sub>Sobre · Equipe · Versão para celular</sub></p>
+<img src="site-institucional/assets/img/apresentacao/home-desktop.png" alt="Página inicial do site institucional LocalLead" width="100%">
 
-<p align="center"><a href="site-institucional/paginas/sobre.html">Sobre</a> · <a href="site-institucional/paginas/solucao.html">Solução</a> · <a href="site-institucional/paginas/aplicativo.html">Aplicativo</a> · <a href="site-institucional/paginas/integrantes.html">Equipe</a></p>
+### Sobre o projeto
+
+<img src="site-institucional/assets/img/apresentacao/sobre-desktop.png" alt="Página Sobre do site institucional" width="100%">
+
+### A solução
+
+<img src="site-institucional/assets/img/apresentacao/solucao-desktop.png" alt="Página da solução no site institucional" width="100%">
+
+### O aplicativo
+
+<img src="site-institucional/assets/img/apresentacao/aplicativo-desktop.png" alt="Página de apresentação do aplicativo" width="100%">
+
+### A equipe
+
+<img src="site-institucional/assets/img/apresentacao/integrantes-desktop.png" alt="Página Integrantes do site institucional" width="100%">
+
+### Versão para celular
+
+<p align="center"><img src="site-institucional/assets/img/apresentacao/home-mobile.png" alt="Versão mobile do site institucional" height="420"></p>
 
 ## Execute na sua máquina
 
