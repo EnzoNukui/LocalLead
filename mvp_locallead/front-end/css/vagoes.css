@@ -1,0 +1,258 @@
+.vagoes-section,
+.vagoes-lista,
+.saidas-principais,
+.vagao-recomendado {
+    max-width: 100%;
+}
+
+.vagoes-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Lista dos vagões */
+
+.vagoes-lista {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 0.5rem;
+}
+
+.vagao {
+    min-height: 3.5rem;
+    border-radius: 0.75rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #111;
+    font-weight: 800;
+}
+
+/* Níveis de lotação */
+
+.vagao-baixa,
+.legenda-cor.baixa {
+    background: #4caf50;
+}
+
+.vagao-moderada,
+.legenda-cor.moderada {
+    background: #ffb300;
+}
+
+.vagao-alta,
+.legenda-cor.alta {
+    background: #e53935;
+    color: #fff;
+}
+
+/* Legenda */
+
+.legenda-vagoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.85rem;
+}
+
+.legenda-item {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.legenda-item small {
+    color: #d1d1d1;
+}
+
+.legenda-cor {
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+/* Estado sem operação */
+
+.vagoes-sem-operacao {
+    background: #3a3a3a;
+    border: 0.0625rem solid #555;
+    border-radius: 0.75rem;
+    padding: 1rem;
+    text-align: center;
+}
+
+.vagoes-sem-operacao p {
+    font-weight: 800;
+    margin-bottom: 0.25rem;
+}
+
+.vagoes-sem-operacao small {
+    color: #bdbdbd;
+}
+
+.vagao-recomendado {
+    background: #1f1f1f;
+    border: 0.125rem solid #4caf50;
+    border-radius: 0.9rem;
+
+    padding: 1rem;
+
+    text-align: center;
+}
+
+.vagao-recomendado small {
+    display: block;
+
+    color: #4caf50;
+
+    font-size: 0.75rem;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+}
+
+.vagao-recomendado strong {
+    display: block;
+
+    margin: 0.35rem 0;
+
+    font-size: 2rem;
+    font-weight: 800;
+
+    color: #fff;
+}
+
+.vagao-recomendado p {
+    color: #bdbdbd;
+    font-size: 0.85rem;
+}
+
+.saidas-principais {
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+}
+
+.saidas-principais h3 {
+    font-size: 1.05rem;
+    font-weight: 900;
+    color: #ffffff;
+}
+
+.saida-item {
+    background: linear-gradient(135deg, #2b2b2b, #1f1f1f);
+    border: 0.0625rem solid rgba(239, 35, 60, 0.35);
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+.saida-item strong {
+    display: block;
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: 900;
+    margin-bottom: 0.6rem;
+}
+
+.saida-item span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--color-primary);
+    color: #ffffff;
+
+    border-radius: var(--radius-pill);
+    padding: 0.45rem 0.9rem;
+
+    font-size: 0.95rem;
+    font-weight: 900;
+
+    margin-bottom: 0.6rem;
+}
+
+.saida-item p {
+    color: #d1d1d1;
+    font-size: 0.85rem;
+    line-height: 1.4;
+}
+
+.frente-trem {
+    display: flex;
+    align-items: center;
+
+    margin-bottom: 0.4rem;
+
+    color: #bdbdbd;
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.frente-trem.direita {
+    justify-content: flex-end;
+}
+
+.frente-trem.esquerda {
+    justify-content: flex-start;
+}
+
+.frente-trem span {
+    background: #1f1f1f;
+    border: 0.0625rem solid rgba(255, 255, 255, 0.08);
+    border-radius: var(--radius-pill);
+
+    padding: 0.35rem 0.75rem;
+}
+
+/* Responsivo */
+
+/* Tablet */
+
+@media (max-width: 768px) {
+    .vagoes-lista {
+        gap: 0.4rem;
+    }
+
+    .vagao {
+        min-height: 3rem;
+        font-size: 0.9rem;
+    }
+
+    .legenda-vagoes {
+        gap: 0.75rem;
+    }
+
+    .legenda-item small {
+        font-size: 0.85rem;
+    }
+
+    .vagoes-sem-operacao {
+        padding: 0.875rem;
+    }
+}
+
+/* Celulares */
+
+@media (max-width: 480px) {
+    .vagoes-lista {
+        gap: 0.35rem;
+    }
+
+    .vagao {
+        min-height: 2.8rem;
+        border-radius: 0.55rem;
+        font-size: 0.85rem;
+    }
+
+    .legenda-vagoes {
+        gap: 0.65rem;
+    }
+
+    .legenda-item small {
+        font-size: 0.8rem;
+    }
+}

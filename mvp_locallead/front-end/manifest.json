@@ -1,0 +1,22 @@
+{
+    "name": "LocalLead",
+    "short_name": "LocalLead",
+    "description": "Aplicativo de apoio à mobilidade ferroviária urbana.",
+    "start_url": "./index.html",
+    "display": "standalone",
+    "background_color": "#1f1f1f",
+    "theme_color": "#ef233c",
+    "orientation": "portrait",
+    "icons": [
+        {
+            "src": "./assets/images/logo_locallead.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "./assets/images/logo_locallead.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}

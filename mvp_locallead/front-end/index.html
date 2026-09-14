@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/icon/favicon.ico" type="image/x-icon">
+    <title>LocalLead</title>
+
+    <link rel="stylesheet" href="./css/global.css">
+    <link rel="stylesheet" href="./css/menu.css">
+    <link rel="stylesheet" href="./css/home.css">
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="./js/api.js" defer></script>
+    <script src="./js/home.js" defer></script>
+    <script src="./js/pwa.js" defer></script>
+
+    <link rel="manifest" href="./manifest.json">
+    <meta name="theme-color" content="#ef233c">
+</head>
+
+<body>
+
+    <header class="site-header">
+    <a href="index.html" class="brand">
+
+        <img
+            src="./assets/images/logo_locallead.png"
+            alt="Logo LocalLead"
+            class="brand-logo"
+        >
+
+        <span class="brand-name">
+            LocalLead
+        </span>
+
+    </a>
+
+    <nav class="main-nav">
+    <a href="index.html" class="active">
+        <i data-lucide="house"></i>
+        <span>Home</span>
+    </a>
+
+    <a href="#">
+        <i data-lucide="map"></i>
+        <span>Maps</span>
+    </a>
+
+    <a href="#">
+        <i data-lucide="route"></i>
+        <span>Linhas</span>
+    </a>
+
+    <a href="#">
+        <i data-lucide="circle-user"></i>
+        <span>Perfil</span>
+    </a>
+</nav>
+</header>
+
+    <main class="home-main">
+
+        <section class="home-hero">
+            <div class="hero-overlay">
+                <aside id="clima-container" class="clima-home">
+                    <p>Carregando clima...</p>
+                </aside>
+
+                <div class="search-box">
+                    <span>Para onde deseja ir?</span>
+                    <strong>⌕</strong>
+                </div>
+            </div>
+        </section>
+
+        <section class="stations-section">
+            <h2>Minhas estações</h2>
+            <div id="linhas-container" class="linhas-lista"></div>
+        </section>
+
+    </main>
+
+</body>
+
+</html>

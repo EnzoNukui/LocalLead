@@ -1,0 +1,33 @@
+0000000000000000000000000000000000000000 5842208cb0094873493634d1a78aa74f44a8bbe6 Enzo Nukui <enzonukui2007@gmail.com> 1780334678 -0300	commit (initial): feat: inicializando o repositorio do mvp da locallead
+5842208cb0094873493634d1a78aa74f44a8bbe6 44af33228fc9c8c0ae09a0b937eeb48c313175ba Enzo Nukui <enzonukui2007@gmail.com> 1780398567 -0300	commit: feat: arrumando a previsão de chegada dos trens
+44af33228fc9c8c0ae09a0b937eeb48c313175ba 28bd1dc779ff38f8b05e44b913e2342bbc81782e Enzo Nukui <enzonukui2007@gmail.com> 1780401517 -0300	commit: feat: adicionando o sistema de retorno para o usuario quando a operação estiver em velocidade reduzida o em restrição
+28bd1dc779ff38f8b05e44b913e2342bbc81782e 8fb7aa3f7c04e3c78b78ebcbab34198c69db1e12 Enzo Nukui <enzonukui2007@gmail.com> 1780535920 -0300	commit: feat; arrumando a regra de negocios da lotação em fim de semana
+8fb7aa3f7c04e3c78b78ebcbab34198c69db1e12 a6241fd1f1052e8b8388fb1e834585968c6d881c Enzo Nukui <enzonukui2007@gmail.com> 1780524003 -0300	commit: feat: realizando o backend da nova funcionalidade dos vagões
+a6241fd1f1052e8b8388fb1e834585968c6d881c 1dd274d5a8377f759569900db1c0adc2c4b938ad Enzo Nukui <enzonukui2007@gmail.com> 1780552349 -0300	commit: feat: adicionando a parte de ocupação de vagões
+1dd274d5a8377f759569900db1c0adc2c4b938ad 8b29c28e5000f1c8931286ef4645f7663e37f347 Enzo Nukui <enzonukui2007@gmail.com> 1780553161 -0300	commit: feat: transformando app em pwa
+8b29c28e5000f1c8931286ef4645f7663e37f347 473db92001bd28507f72013f8d9615595527bac9 Enzo Nukui <enzonukui2007@gmail.com> 1780635867 -0300	commit: feat: alterando o que era necessario para fazer o deploy do backend
+473db92001bd28507f72013f8d9615595527bac9 88820cb01641f3aa8260f3b24810b50f5b2a1578 Enzo Nukui <enzonukui2007@gmail.com> 1780636268 -0300	commit: feat: arrumando o PORT duplicado
+88820cb01641f3aa8260f3b24810b50f5b2a1578 11cb6ab88a39ece1c1748c8c3d2033fa327b1f00 Enzo Nukui <enzonukui2007@gmail.com> 1780637913 -0300	commit: feat: arrumando o css depois de transformado em pwa e tentando fazer ele rastrear o clima
+11cb6ab88a39ece1c1748c8c3d2033fa327b1f00 572e2bce9755249053e19826cd33897a1e9f6cb0 Enzo Nukui <enzonukui2007@gmail.com> 1780638547 -0300	commit: feat: testando onde esta o erro da api do clima
+572e2bce9755249053e19826cd33897a1e9f6cb0 43e589aac561bb5d26766c5fe7d196ffc41419a1 Enzo Nukui <enzonukui2007@gmail.com> 1780639231 -0300	commit: fix: evita quebra da API do clima
+43e589aac561bb5d26766c5fe7d196ffc41419a1 c1362a2414bbd349b90da1fc309938570da7cd0f Enzo Nukui <enzonukui2007@gmail.com> 1780639685 -0300	commit: fix: testando temporariamente a nova clima.route para tentar achar o problema
+c1362a2414bbd349b90da1fc309938570da7cd0f 5bba11cdce4f56fa9eab3d1a8ea875b8e4f61c1f Enzo Nukui <enzonukui2007@gmail.com> 1780640052 -0300	commit: fix: testando uma nova função para arrumar o clima no service
+5bba11cdce4f56fa9eab3d1a8ea875b8e4f61c1f 2ff853e5310e15a61a7f7668364618dc14bfaf98 Enzo Nukui <enzonukui2007@gmail.com> 1780640250 -0300	commit: debug: mostre o erro da api do clima
+2ff853e5310e15a61a7f7668364618dc14bfaf98 7fbf4950253cd3ee5e7b4b685609cbfab3430e3e Enzo Nukui <enzonukui2007@gmail.com> 1780640412 -0300	commit: fix: adiciona cache na api do clima
+7fbf4950253cd3ee5e7b4b685609cbfab3430e3e 2a5cb6086b3b21164cf73c0d39a3efbdcd3fb024 Enzo Nukui <enzonukui2007@gmail.com> 1780641032 -0300	commit: fix: simplifica consulta da api do clima
+2a5cb6086b3b21164cf73c0d39a3efbdcd3fb024 d79919c47b8c036a0017b84c7b21897dcbab0f8e Enzo Nukui <enzonukui2007@gmail.com> 1780641372 -0300	commit: fix: testando outra api no clima
+d79919c47b8c036a0017b84c7b21897dcbab0f8e 1aa8ca7b2e9cb22f6af24f9494ef67b89fc437a2 Enzo Nukui <enzonukui2007@gmail.com> 1780641827 -0300	commit: debug: mostra erro real da rota do clima
+1aa8ca7b2e9cb22f6af24f9494ef67b89fc437a2 81296085b568c8708a792aaca7575d5b9cd5235f Enzo Nukui <enzonukui2007@gmail.com> 1780642137 -0300	commit: fix: exporta função buscarClima
+81296085b568c8708a792aaca7575d5b9cd5235f d21dfc8177d0321320192218f32603029a4196c3 Enzo Nukui <enzonukui2007@gmail.com> 1780642437 -0300	commit: fix: corrige mensagem de erro do clima api no route
+d21dfc8177d0321320192218f32603029a4196c3 9e5f89d5eb82a2dc5faa482f1c5c888ea50a8cb6 Enzo Nukui <enzonukui2007@gmail.com> 1780643633 -0300	commit: fix: ajusta o horario para o fuso horario de são paulo
+9e5f89d5eb82a2dc5faa482f1c5c888ea50a8cb6 017bd6e90893e14171a8c60db947dc6d74e42685 Enzo Nukui <enzonukui2007@gmail.com> 1780643974 -0300	commit: fix: alterando a versão do service worker
+017bd6e90893e14171a8c60db947dc6d74e42685 3ff2af16effec7d81f5a93cbb341cab69641a73d Enzo Nukui <enzonukui2007@gmail.com> 1780644991 -0300	commit: fix: arrumando menu para os celulares e deixando o carregamento mais rapido
+3ff2af16effec7d81f5a93cbb341cab69641a73d 2a81b04ef159a7353be61b5f3614fe8c321ee9b5 Enzo Nukui <enzonukui2007@gmail.com> 1780645405 -0300	commit: feat: traduzindo a descrição de clima na tela da home
+2a81b04ef159a7353be61b5f3614fe8c321ee9b5 15763b36c142798cf586ce3ec13cd6c2118e22ac Enzo Nukui <enzonukui2007@gmail.com> 1780645518 -0300	commit: feat: terminando de adicionar a descrição traduzida
+15763b36c142798cf586ce3ec13cd6c2118e22ac 7a6b3eb5bde06f6a4a912ede549bc74784344f18 Enzo Nukui <enzonukui2007@gmail.com> 1780645641 -0300	commit: feat: adicionando favicon no site
+7a6b3eb5bde06f6a4a912ede549bc74784344f18 7af79db3b376451e1b71a7d0253e8695b8b5b222 Enzo Nukui <enzonukui2007@gmail.com> 1780646015 -0300	commit: fix: melhorando o sistemas de emoji do clima
+7af79db3b376451e1b71a7d0253e8695b8b5b222 0aa046200fa1501019caaf2b528852e7899f2acc Enzo Nukui <enzonukui2007@gmail.com> 1780646308 -0300	commit: feat: terminando de adicionar o favicon
+0aa046200fa1501019caaf2b528852e7899f2acc d3161479432e8ed5cac482daea6b96be8e9118c6 Enzo Nukui <enzonukui2007@gmail.com> 1780686374 -0300	commit: feat: adicionando a documentação do projeto
+d3161479432e8ed5cac482daea6b96be8e9118c6 ecde5308d4c96b3c5e9b60da14edf4775c75247a Enzo Nukui <enzonukui2007@gmail.com> 1780687492 -0300	commit: feat: adicionando as imagens para a documentação
+ecde5308d4c96b3c5e9b60da14edf4775c75247a 40bc5ed12a0bcf472696240b91837e3fd48e21ec Enzo Nukui <enzonukui2007@gmail.com> 1780710078 -0300	commit: fix: melhorando a recomendação de vagão para linha 12 calmon viana
+40bc5ed12a0bcf472696240b91837e3fd48e21ec b8bfbb9aad97e73dca48895a75ba9773e94af8d4 Enzo Nukui <enzonukui2007@gmail.com> 1780780523 -0300	commit: fix: arruma as imagens do repositorio

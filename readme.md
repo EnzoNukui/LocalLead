@@ -1,399 +1,222 @@
-# LocalLead — Inteligência Espacial para Mobilidade Urbana
+# LocalLead 🚆
 
-## Descrição do Projeto
+<p align="center"><strong>Informação para decidir melhor antes de embarcar.</strong><br>
+Um MVP de mobilidade ferroviária que reúne status das linhas, estação próxima, previsões de chegada, clima e ocupação estimada dos vagões.</p>
 
-O **LocalLead** é um site institucional desenvolvido para apresentar uma solução de mobilidade urbana inteligente criada para a **Global Solution FIAP 2026**. A proposta do projeto é demonstrar como dados espaciais, inteligência artificial, análise climática e informações ferroviárias podem contribuir para uma experiência mais previsível, clara e segura para passageiros do transporte urbano sobre trilhos.
+<p align="center">
+  <a href="https://locallead.vercel.app/"><strong>📱 Experimentar o MVP</strong></a> &nbsp;·&nbsp;
+  <a href="https://locallead-site.vercel.app/index.html"><strong>🌐 Conhecer o projeto</strong></a> &nbsp;·&nbsp;
+  <a href="https://locallead-api.onrender.com/"><strong>🔌 Acessar a API</strong></a>
+</p>
 
-O front-end foi desenvolvido com foco em uma comunicação visual moderna, limpa e tecnológica, apresentando o problema enfrentado pelos usuários, o conceito da solução, o funcionamento da proposta, o MVP do aplicativo, os integrantes do grupo e os canais de contato.
+<p align="center"><img src="mvp_locallead/docs/images/home_locallead.jpg" alt="Tela inicial do LocalLead com as Linhas 11-Coral e 12-Safira" width="230">&nbsp;&nbsp;<img src="mvp_locallead/docs/images/linha_locallead.jpg" alt="Tela da linha com clima e próximos trens estimados" width="230">&nbsp;&nbsp;<img src="mvp_locallead/docs/images/vagoes_locallead.jpg" alt="Tela com ocupação estimada e sugestão de vagões" width="230"></p>
+<p align="center"><sub>Escolha a linha → consulte os próximos trens → compare os vagões. Capturas ilustrativas do MVP.</sub></p>
 
-A identidade visual do projeto utiliza uma paleta baseada em vermelho, branco, cinza claro, cinza escuro e preto, buscando transmitir inovação, mobilidade, confiança e clareza visual.
+> **Global Solution FIAP 2026** · Projeto acadêmico · Cobertura inicial: **Linhas 11-Coral e 12-Safira da CPTM**
 
----
+## Uma prévia do aplicativo
 
-## 🔗 Repositório
+O MVP foi desenhado para uma leitura rápida no celular: a pessoa escolhe uma linha, entende o cenário e chega à informação que precisa sem atravessar telas desnecessárias.
 
-[![GitHub](https://img.icons8.com/ios-glyphs/30/ffffff/github.png)](https://github.com/EnzoNukui/LocalLead)  
-[https://github.com/EnzoNukui/LocalLead](https://github.com/EnzoNukui/LocalLead)
+<p align="center">
+  <img src="mvp_locallead/front-end/assets/images/linha_11.jpg" alt="Imagem da Linha 11-Coral no aplicativo" width="260">
+  <img src="mvp_locallead/front-end/assets/images/linha_12.jpg" alt="Imagem da Linha 12-Safira no aplicativo" width="260">
+</p>
+<p align="center"><sub>As duas linhas disponíveis no MVP, cada uma com sua identidade visual.</sub></p>
 
----
+<p align="center">
+  <img src="mvp_locallead/front-end/assets/images/imagem_trem_luz.png" alt="Imagem de trem usada na identidade visual do aplicativo" width="540">
+</p>
 
-## 🌐 Link do Projeto
+## Navegue pelo projeto
 
-O front-end do projeto **LocalLead** está disponível para acesso público através do deploy na Vercel.
+| Quero… | Acesse |
+| --- | --- |
+| Testar a experiência no celular | [MVP publicado na Vercel](https://locallead.vercel.app/) |
+| Entender a proposta e conhecer a equipe | [Site institucional publicado](https://locallead-site.vercel.app/index.html) |
+| Ver o código do aplicativo | [Front-end do MVP](mvp_locallead/front-end/) e [API do MVP](mvp_locallead/back-end/) |
+| Explorar o site institucional | [Código do site](site-institucional/) |
+| Consultar a documentação detalhada | [README do MVP](mvp_locallead/readme.md) e [README do site](site-institucional/readme.md) |
+| Relatar um problema ou sugerir uma melhoria | [Issues do repositório](https://github.com/EnzoNukui/LocalLead/issues) |
 
-🔗 <a href="https://locallead-site.vercel.app/index.html" target="_blank"><strong>Acessar o site do LocalLead</strong></a>
+## Por que o LocalLead existe?
 
----
+Na rotina de quem usa o trem, poucos minutos mudam a decisão de sair, esperar, trocar de sentido ou escolher onde embarcar. Essas informações costumam estar dispersas. O **LocalLead** propõe reunir o que é útil para a viagem em uma interface direta, feita primeiro para o celular.
 
-## 🛠️ Tecnologias Utilizadas
+Este repositório reúne **duas entregas complementares**. O **MVP** demonstra a experiência prática do passageiro; o **site institucional** apresenta o problema, a visão da solução, o aplicativo e a equipe. A proposta conceitual do site explora o uso de dados espaciais, clima e inteligência para uma mobilidade mais previsível. O MVP implementa uma primeira versão com dados disponíveis e regras de estimativa, descritas abaixo.
 
-O projeto foi desenvolvido utilizando tecnologias web nativas, priorizando organização, responsividade, semântica e facilidade de manutenção.
+## O MVP: da escolha da linha ao embarque
 
-* **HTML5:** utilizado para estruturar as páginas, seções, navegação, conteúdos institucionais e elementos semânticos do site.
-* **CSS3:** responsável pela identidade visual, responsividade, organização dos layouts, grids, cards, botões, header, footer e adaptação para diferentes tamanhos de tela.
-* **JavaScript:** utilizado para adicionar interatividade ao site, principalmente no menu responsivo e em comportamentos dinâmicos da interface.
-* **Git:** utilizado para controle de versão durante o desenvolvimento.
-* **GitHub:** utilizado para hospedagem do código-fonte e colaboração entre os integrantes.
-* **Vercel:** utilizada para publicação do projeto em ambiente web.
+### 1. Veja a situação das linhas
 
----
+A tela inicial destaca as Linhas **11-Coral** e **12-Safira**, com situação operacional, intervalo e lotação geral estimada. O status é consultado por uma integração externa; a API do projeto mantém um cache de cinco minutos para essa consulta.
 
-## 📸 Imagens e Representação do Projeto
+### 2. Encontre sua estação e consulte os próximos trens
 
-As capturas abaixo demonstram as principais telas desenvolvidas no front-end do **LocalLead**, apresentando a identidade visual, a organização das páginas e a experiência responsiva do site.
+Com a permissão do usuário, a **Geolocation API** do navegador fornece a posição para identificar a estação mais próxima da linha selecionada. Na tela da linha, é possível alternar o sentido e consultar os próximos trens estimados, além de percorrer um mapa linear das estações.
 
-### 🏠 1. Página Principal — Home
+<p align="center"><img src="mvp_locallead/docs/images/linha_locallead.jpg" alt="Previsões estimadas dos próximos trens e alternância de sentido" width="300"></p>
 
-A página inicial apresenta a proposta central do LocalLead, destacando a mobilidade urbana inteligente, o uso de dados e a importância de oferecer mais previsibilidade para passageiros do transporte ferroviário.
+As previsões combinam estação, sentido, horário, intervalos operacionais, arquivos **GTFS** e tabelas internas de fim de semana. São **estimativas**, não posições recebidas diretamente dos trens.
 
-<img src="./assets/img/apresentacao/home-desktop.png" alt="Página Home do LocalLead" width="100%">
+### 3. Compare os vagões
 
-### 🛰️ 2. Página Sobre
+O MVP apresenta uma estimativa visual de ocupação por vagão e sugere opções de embarque conforme o nível geral de lotação. Em algumas estações principais, também exibe sugestões de acesso para o desembarque.
 
-A página Sobre contextualiza o projeto, explicando o propósito da solução e a relação entre dados espaciais, inteligência artificial e transporte ferroviário urbano.
+<p align="center"><img src="mvp_locallead/docs/images/vagoes_locallead.jpg" alt="Ocupação estimada dos oito vagões e sugestões de embarque e desembarque" width="300"></p>
 
-<img src="./assets/img/apresentacao/sobre-desktop.png" alt="Página Sobre do LocalLead" width="100%">
+As cores e sugestões resultam de **regras internas**. Não há sensores medindo a ocupação real da composição.
 
-### ⚙️ 3. Página Solução
+### 4. Considere o clima e instale no celular
 
-A página Solução apresenta o funcionamento conceitual da proposta, mostrando etapas como coleta de dados, processamento por inteligência artificial e distribuição de previsões acionáveis.
+A aplicação consulta informações meteorológicas para exibir uma mensagem contextual ao passageiro. Como **PWA**, possui manifesto e service worker e pode ser adicionada à tela inicial em navegadores compatíveis. A localização precisa ser autorizada para a função de estação próxima.
 
-<img src="./assets/img/apresentacao/solucao-desktop.png" alt="Página Solução do LocalLead" width="100%">
+## Como as peças se conectam
 
-### 📱 4. Página Nosso Aplicativo
+<p align="center"><img src="mvp_locallead/docs/images/diagrama_visual.png" alt="Diagrama visual da arquitetura do LocalLead: usuário, front-end, back-end e fontes de dados" width="820"></p>
+<p align="center"><sub>Fluxo da solução: o navegador conversa com o front-end, que consulta a API e suas fontes de dados.</sub></p>
 
-A página Nosso Aplicativo apresenta o MVP do LocalLead, suas principais telas, funcionalidades, limitações e tecnologias utilizadas no desenvolvimento da aplicação.
+```text
+Passageiro no navegador
+        │ localização autorizada + linha e sentido escolhidos
+        ▼
+Front-end do MVP (HTML, CSS, JavaScript, PWA)
+        │ requisições HTTP
+        ▼
+API LocalLead (Node.js + Express)
+        ├── status operacional → serviço externo
+        ├── clima → serviço externo
+        ├── estação próxima → coordenadas das estações
+        ├── próximos trens → GTFS + intervalos + regras
+        └── lotação e vagões → estimativas por horário e regras
+```
 
-<img src="./assets/img/apresentacao/aplicativo-desktop.png" alt="Página Nosso Aplicativo do LocalLead" width="100%">
+O front-end do MVP foi preparado para publicação na **Vercel** e a API para o **Render**. Os links de demonstração estão no início deste README. O site institucional é uma aplicação estática independente da API.
 
-### 👥 5. Página Integrantes
+### Endpoints da API
 
-A página Integrantes apresenta os desenvolvedores responsáveis pelo projeto, com nome, RM, turma e links para GitHub e LinkedIn.
+| Rota | Finalidade | Parâmetros |
+| --- | --- | --- |
+| `GET /status` | Situação operacional das linhas | — |
+| `GET /clima` | Clima e mensagem contextual | `lat`, `lon` |
+| `GET /estacao-proxima` | Estação mais próxima | `linha`, `lat`, `lon` |
+| `GET /proximos-trens` | Próximas chegadas estimadas | `linha`, `estacao`, `destino` |
+| `GET /mapa-linha` | Estações ordenadas por sentido | `linha`, `destino` |
+| `GET /lotacao` | Lotação geral estimada | `linha` |
+| `GET /vagoes` | Ocupação e sugestões por vagão | `linha`, `destino` |
 
-<img src="./assets/img/apresentacao/integrantes-desktop.png" alt="Página Integrantes do LocalLead" width="100%">
+Por exemplo, com a API local em execução, `http://localhost:3000/lotacao?linha=12` consulta a lotação estimada da Linha 12. As rotas que usam serviços externos dependem da disponibilidade dessas fontes.
 
-### 📱 6. Experiência Responsiva — Mobile
+## O site institucional
 
-O projeto foi desenvolvido para se adaptar a diferentes tamanhos de tela, reorganizando menus, imagens, textos, cards e botões para garantir boa usabilidade em dispositivos móveis.
+O site conta a história do projeto: o desafio de viajar com pouca previsibilidade, a proposta de solução, a apresentação do aplicativo e os integrantes. Foi construído com **HTML, CSS e JavaScript**, com páginas e estilos responsivos.
 
-| Home Mobile |
-| :---: |
-| <img src="./assets/img/apresentacao/home-mobile.png" alt="Página Home Mobile do LocalLead" height="420"> |
+<p align="center"><img src="site-institucional/assets/img/apresentacao/home-desktop.png" alt="Página inicial do site institucional LocalLead" width="720"></p>
+<p align="center"><sub><a href="site-institucional/paginas/sobre.html">Sobre</a> · <a href="site-institucional/paginas/solucao.html">Solução</a> · <a href="site-institucional/paginas/aplicativo.html">Aplicativo</a> · <a href="site-institucional/paginas/integrantes.html">Equipe</a></sub></p>
 
-| Aplicativo Mobile |
-| :---: |
-| <img src="./assets/img/app/app-home.jpg" alt="Página Aplicativo Mobile do LocalLead" height="420"> |
+| Visão da solução | Apresentação do aplicativo |
+| :---: | :---: |
+| <img src="site-institucional/assets/img/apresentacao/solucao-desktop.png" alt="Página da solução no site institucional" width="430"> | <img src="site-institucional/assets/img/apresentacao/aplicativo-desktop.png" alt="Página de apresentação do aplicativo" width="430"> |
 
----
+<p align="center">
+  <img src="site-institucional/assets/img/apresentacao/sobre-desktop.png" alt="Página Sobre do site institucional" width="285">
+  <img src="site-institucional/assets/img/apresentacao/integrantes-desktop.png" alt="Página Integrantes do site institucional" width="285">
+  <img src="site-institucional/assets/img/apresentacao/home-mobile.png" alt="Versão mobile do site institucional" width="160">
+</p>
+<p align="center"><sub>O site institucional contextualiza a solução, apresenta a equipe e demonstra a adaptação para telas menores.</sub></p>
 
-## 🚀 Como Inicializar o Projeto
+## Execute na sua máquina
 
-Como este repositório corresponde ao front-end institucional do **LocalLead**, não é necessário instalar dependências para visualizar o projeto localmente.
+**Pré-requisitos:** Git, navegador moderno, **Node.js e npm** para a API, além de um servidor HTTP estático para as páginas. O **Live Server** no VS Code é uma opção simples. Use `localhost` para testar localização e recursos do PWA.
 
-### 1. Clonar o repositório
+### 1. Clone o repositório
 
 ```bash
 git clone https://github.com/EnzoNukui/LocalLead.git
-```
-
-### 2. Acessar a pasta do projeto
-
-```bash
 cd LocalLead
 ```
 
-### 3. Abrir o projeto no navegador
+### 2. Inicie a API do MVP
 
-Abra o arquivo abaixo diretamente no navegador:
-
-```text
-index.html
-```
-
-Também é possível utilizar a extensão **Live Server** no Visual Studio Code para executar o projeto localmente com recarregamento automático.
-
-### 4. Executando com Live Server
-
-```text
-1. Abra a pasta do projeto no VS Code
-2. Clique com o botão direito no arquivo index.html
-3. Selecione a opção "Open with Live Server"
-```
-
----
-
----
-
-## 📱 Como Inicializar o MVP do Aplicativo
-
-Além do site institucional, o projeto também apresenta um **MVP funcional do aplicativo LocalLead**, desenvolvido para demonstrar a experiência mobile de consulta a linhas, horários estimados e informações de vagões.
-
-O MVP está em um repositório separado:
-
-🔗 [https://github.com/EnzoNukui/mvp_locallead](https://github.com/EnzoNukui/mvp_locallead)
-
----
-
-### 1. Clonar o repositório do MVP
+Em um terminal, a partir da raiz do projeto:
 
 ```bash
-git clone https://github.com/EnzoNukui/mvp_locallead.git
+cd mvp_locallead/back-end
+npm ci
+node src/server.js
 ```
 
-### 2. Acessar a pasta do projeto
+Acesse `http://localhost:3000/` para conferir a resposta `Servidor da LocalLead funcionando!`. Mantenha o processo aberto enquanto testa o MVP.
 
-```bash
-cd mvp_locallead
+> O `npm start` atual do back-end aponta para um arquivo inexistente na raiz da pasta. Por isso, use `node src/server.js`.
+
+### 3. Abra o front-end do MVP
+
+Abra [`mvp_locallead/front-end/index.html`](mvp_locallead/front-end/index.html) com o **Live Server**. Por padrão, [`front-end/js/api.js`](mvp_locallead/front-end/js/api.js) usa a API publicada no Render. Para conectar o front-end à **API local**, altere a primeira linha desse arquivo para:
+
+```js
+const API_BASE_URL = "http://localhost:3000";
 ```
 
-### 3. Instalar as dependências
+Ao terminar o teste local, restaure a URL publicada caso vá usar ou publicar esse front-end com a API remota. Autorize a localização no navegador para experimentar a estação mais próxima.
 
-Caso o projeto utilize Node.js no back-end, instale as dependências com:
+### 4. Abra o site institucional
 
-```bash
-npm install
-```
+Abra [`site-institucional/index.html`](site-institucional/index.html) com o **Live Server**. O site não exige `npm install` nem a API do MVP.
 
-Se o back-end estiver dentro de uma pasta específica, acesse essa pasta antes de instalar:
-
-```bash
-cd back-end
-npm install
-```
-
-### 4. Inicializar o servidor
-
-Para iniciar o servidor do MVP, utilize:
-
-```bash
-cd src
-npm start
-```
-
-Caso o projeto esteja configurado para rodar diretamente pelo arquivo principal, utilize:
-
-```bash
-node server.js
-```
-
-### 5. Abrir o front-end do MVP
-
-Após iniciar o servidor, abra o front-end do projeto no navegador. Se estiver utilizando o VS Code, recomenda-se abrir o arquivo principal com a extensão **Live Server**.
-
-```text
-1. Abra a pasta do MVP no VS Code
-2. Localize o arquivo index.html do front-end
-3. Clique com o botão direito
-4. Selecione "Open with Live Server"
-```
-
----
-
-## 📍 Permissão de Localização
-
-Para que o MVP funcione corretamente, é necessário permitir o acesso à localização do dispositivo quando o navegador solicitar.
-
-Essa permissão é importante porque o LocalLead utiliza a localização do usuário para simular uma experiência mais contextualizada, permitindo que o sistema identifique melhor o ponto de partida e relacione a experiência do passageiro com o ambiente urbano ao redor.
-
-Ao abrir o MVP no navegador, aceite a solicitação:
-
-```text
-Permitir que este site acesse sua localização?
-```
-
-Clique em:
-
-```text
-Permitir
-```
-
-Caso a localização seja bloqueada, algumas funcionalidades do MVP podem não funcionar corretamente ou apresentar informações menos precisas.
-
----
-
-## ⚠️ Observações sobre o MVP
-
-O MVP do LocalLead ainda possui limitações por se tratar de uma primeira versão acadêmica da solução.
-
-* A localização do usuário depende da permissão concedida no navegador.
-* O projeto ainda não utiliza GPS real dos trens.
-* As previsões são estimadas com base em regras internas e dados disponíveis.
-* Algumas informações podem depender da disponibilidade de APIs externas.
-* A visualização de ocupação dos vagões representa uma proposta de funcionamento.
-
----
-
-## 📁 Estrutura de Pastas do Projeto
-
-A arquitetura do repositório foi organizada para separar recursos visuais, folhas de estilo, scripts e páginas internas, facilitando a manutenção e evolução do projeto.
+## Estrutura das pastas
 
 ```text
 LocalLead/
-├── assets/
-│   ├── favicon/
-│   │   └── favicon.ico
-│   ├── img/
-│   │   ├── app/
-│   │   │   ├── app-home.jpg
-│   │   │   ├── app-horarios-linha.jpg
-│   │   │   ├── app-mockup-principal.png
-│   │   │   └── app-vagoes.jpg
-│   │   ├── apresentacao/
-│   │   │   ├── aplicativo-desktop.png
-│   │   │   ├── home-desktop.png
-│   │   │   ├── home-mobile.png
-│   │   │   ├── integrantes-desktop.png
-│   │   │   ├── sobre-desktop.png
-│   │   │   └── solucao-desktop.png
-│   │   ├── home/
-│   │   │   ├── cta-cidade-conectada-compresso.png
-│   │   │   ├── fluxo-satélite-ia-cidade-compresso.png
-│   │   │   ├── hero-trem-cidade-compresso.png
-│   │   │   ├── mockup-locaallead-app-compresso.png
-│   │   │   ├── problema-chuva-compresso.png
-│   │   │   ├── problema-espera-compresso.png
-│   │   │   ├── problema-lotacao-compresso.png
-│   │   │   ├── publico-estudantes-compresso.png
-│   │   │   ├── publico-passageiros-compresso.png
-│   │   │   └── publico-trabalhadores-compresso.png
-│   │   ├── sobre/
-│   │   │   ├── sobre-hero-contexto-urbano.png
-│   │   │   ├── sobre-rede-urbana-inteligente.png
-│   │   │   └── sobre-space-connect-conceito.png
-│   │   ├── solucao/
-│   │   │   ├── distribuicao.jpeg
-│   │   │   ├── processamento.jpeg
-│   │   │   └── satelite.jpeg
-│   │   └── logo_locallead.png
-│   └── integrantes/
-│       ├── foto_arthur.jpg
-│       ├── foto_diego.jpeg
-│       ├── foto_enzo.jpeg
-│       ├── foto_leticia_cardoso.jpeg
-│       └── foto_leticia_dias.jpeg
-├── css/
-│   ├── apicativo.css
-│   ├── base.css
-│   ├── buttons.css
-│   ├── cards.css
-│   ├── contato.css
-│   ├── faq.css
-│   ├── footer.css
-│   ├── hero.css
-│   ├── home.css
-│   ├── integrantes.css
-│   ├── layout.css
-│   ├── main.css
-│   ├── menu.css
-│   ├── sobre.css
-│   └── solucao.css
-├── js/
-│   ├── contato.js
-│   ├── faq.js
-│   ├── main.js
-│   ├── menu.js
-│   └── solucao.js
-├── paginas/
-│   ├── aplicativo.html
-│   ├── contato.html
-│   ├── faq.html
-│   ├── integrantes.html
-│   ├── sobre.html
-│   └── solucao.html
-├── index.html
-└── readme.md
+├── README.md                         # Visão geral das duas entregas
+├── mvp_locallead/                    # Aplicação do passageiro (PWA)
+│   ├── front-end/
+│   │   ├── index.html                # Tela inicial e escolha da linha
+│   │   ├── linha.html                # Linha, horários, mapa e vagões
+│   │   ├── css/                      # Layout e estilos das telas
+│   │   ├── js/
+│   │   │   ├── api.js                # Endereço da API e requisições
+│   │   │   ├── home.js               # Comportamento da tela inicial
+│   │   │   ├── linha.js              # Interações da tela da linha
+│   │   │   └── pwa.js                # Registro do PWA
+│   │   ├── manifest.json             # Metadados de instalação
+│   │   ├── service-worker.js         # Cache da aplicação
+│   │   └── assets/                   # Ícone, logo e imagens
+│   ├── back-end/
+│   │   ├── src/
+│   │   │   ├── server.js             # Servidor Express
+│   │   │   ├── routes/               # Sete endpoints HTTP
+│   │   │   └── services/             # Clima, GTFS e regras de negócio
+│   │   ├── data/
+│   │   │   ├── gtfs/                 # Paradas, viagens e horários
+│   │   │   └── tabelas/              # Intervalos de fim de semana
+│   │   ├── package.json
+│   │   └── package-lock.json
+│   ├── docs/images/                  # Capturas do MVP e diagrama
+│   └── readme.md                     # Documentação específica do MVP
+└── site-institucional/               # Apresentação pública do projeto
+    ├── index.html                    # Página inicial
+    ├── paginas/                      # Sobre, solução, app, equipe, FAQ e contato
+    ├── css/                          # Estilos modulares
+    ├── js/                           # Navegação e interações
+    ├── assets/                       # Imagens, integrantes e favicon
+    └── readme.md                     # Documentação específica do site
 ```
 
----
+## Limites e próximos passos
 
-## 🎨 Organização Visual e Responsividade
+Este é um **MVP acadêmico**, não um sistema oficial de operação da CPTM. O status depende de uma fonte externa; previsões de chegada e lotação são calculadas por estimativas. O projeto **não recebe a posição real dos trens nem mede a ocupação com sensores**. A localização é obtida do navegador mediante permissão e não é acompanhada continuamente. A cobertura inicial contempla apenas as Linhas 11-Coral e 12-Safira.
 
-O CSS do projeto foi separado em arquivos modulares, facilitando a organização dos estilos por responsabilidade. O arquivo `main.css` centraliza os imports dos demais arquivos, enquanto cada página possui um CSS específico para seus componentes principais.
+Evoluções possíveis incluem ampliar a cobertura, validar as estimativas com dados operacionais mais completos e melhorar a confiabilidade das integrações. Para decisões de viagem que exijam confirmação em tempo real, consulte os canais oficiais da operadora.
 
-A responsividade foi planejada para adaptar o layout em diferentes tamanhos de tela, reorganizando grids, imagens, menus, cards e botões. No mobile, o menu tradicional é substituído por um menu hambúrguer, e as seções passam a ter uma leitura vertical mais confortável.
+## Equipe e créditos
 
----
+| Integrante do site institucional | RM | GitHub |
+| --- | --- | --- |
+| Arthur Carvalho Brito Martins | 572325 | [arthurmartinss](https://github.com/arthurmartinss) |
+| Diego Soares Trujillo | 570147 | [diegotrujillo011](https://github.com/diegotrujillo011) |
+| Enzo Nukui da Silva | 569770 | [EnzoNukui](https://github.com/EnzoNukui) |
+| Leticia Cardoso de Almeida | 569415 | [lehalmeidafc0](https://github.com/lehalmeidafc0) |
+| Leticia Dias Araujo Felix Moratori | 569138 | [LeticiaFelix18](https://github.com/LeticiaFelix18) |
 
-## 👥 Autores e Créditos
-
-Conheça os desenvolvedores responsáveis pela idealização e desenvolvimento do projeto **LocalLead**:
-
-<table>
-  <thead>
-    <tr>
-      <th>Nome do Integrante</th>
-      <th>RM</th>
-      <th>Turma</th>
-      <th>LinkedIn</th>
-      <th>GitHub</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Arthur Carvalho Brito Martins</td>
-      <td>RM 572325</td>
-      <td>1TDSPH</td>
-      <td><a href="https://www.linkedin.com/in/arthur-martinss/">LinkedIn</a></td>
-      <td><a href="https://github.com/arthurmartinss">GitHub</a></td>
-    </tr>
-    <tr>
-      <td>Diego Soares Trujillo</td>
-      <td>RM 570147</td>
-      <td>1TDSPH</td>
-      <td><a href="https://www.linkedin.com/in/diego-trujillo-3441b9380/">LinkedIn</a></td>
-      <td><a href="https://github.com/diegotrujillo011">GitHub</a></td>
-    </tr>
-    <tr>
-      <td>Enzo Nukui da Silva</td>
-      <td>RM 569770</td>
-      <td>1TDSPH</td>
-      <td><a href="https://www.linkedin.com/in/enzo-nukui/">LinkedIn</a></td>
-      <td><a href="https://github.com/EnzoNukui">GitHub</a></td>
-    </tr>
-    <tr>
-      <td>Leticia Cardoso de Almeida</td>
-      <td>RM 569415</td>
-      <td>1TDSPH</td>
-      <td><a href="https://www.linkedin.com/in/let%C3%ADcia-almeida-70b851294/">LinkedIn</a></td>
-      <td><a href="https://github.com/lehalmeidafc0">GitHub</a></td>
-    </tr>
-    <tr>
-      <td>Leticia Dias Araujo Felix Moratori</td>
-      <td>RM 569138</td>
-      <td>1TDSPH</td>
-      <td><a href="https://www.linkedin.com/in/leticia-felix-660253286">LinkedIn</a></td>
-      <td><a href="https://github.com/LeticiaFelix18">GitHub</a></td>
-    </tr>
-  </tbody>
-</table>
-
----
-
-## ✉️ Contato e Suporte
-
-Para dúvidas, sugestões ou informações sobre o projeto **LocalLead**, entre em contato pelos canais abaixo:
-
-* 🐛 **Reporte de Bugs e Sugestões:** abra uma issue diretamente no repositório do projeto:  
-[https://github.com/EnzoNukui/LocalLead/issues](https://github.com/EnzoNukui/LocalLead/issues)
-
-* 🔗 **Repositório Oficial:**  
-[https://github.com/EnzoNukui/LocalLead](https://github.com/EnzoNukui/LocalLead)
-
-* ✉️ **Contato Direto:**  
-[rm569770@fiap.com.br](mailto:rm569770@fiap.com.br)
-
----
-
-## 📌 Status do Projeto
-
-O projeto está em desenvolvimento acadêmico e faz parte da entrega da **Global Solution FIAP 2026**.
-
-Atualmente, o repositório contém a estrutura front-end do site institucional, com páginas HTML, arquivos CSS modulares, scripts JavaScript e recursos visuais organizados em pastas específicas.
-
----
-
-## 📄 Licença
-
-Este projeto foi desenvolvido para fins acadêmicos.
-
-O uso, reprodução ou adaptação do conteúdo deve respeitar os créditos dos autores e o contexto da entrega para a **Global Solution FIAP 2026**.
+O **MVP do aplicativo** foi desenvolvido por **Enzo Nukui**. O projeto foi criado para fins acadêmicos na Global Solution FIAP 2026.

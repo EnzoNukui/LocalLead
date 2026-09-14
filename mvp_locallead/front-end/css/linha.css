@@ -1,0 +1,484 @@
+#linha-detalhes,
+.linha-topo,
+.clima-operacao-card,
+.estacao-atual-card,
+.tabs-linha,
+.conteudo-tabs,
+.mapa-section {
+    max-width: 100%;
+}
+
+main {
+  padding-bottom: 5rem;
+}
+
+#linha-detalhes {
+  display: grid;
+  gap: 1rem;
+}
+
+.linha-topo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.btn-voltar {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: fit-content;
+  padding: 0.6rem 1rem;
+  border-radius: var(--radius-pill);
+  background: #2f2f2f;
+  color: var(--color-text-light);
+  font-weight: 700;
+  transition: 0.2s ease;
+}
+
+.btn-voltar:hover {
+  background: var(--color-primary);
+}
+
+.btn-voltar span:first-child {
+  font-size: 1.3rem;
+  line-height: 1;
+}
+
+.linha-titulo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.linha-header-icone {
+  width: 1.7rem;
+  height: 1.7rem;
+  object-fit: contain;
+}
+
+.linha-titulo h1 {
+  font-size: clamp(1.3rem, 3vw, 2rem);
+}
+
+.clima-operacao-card {
+  background: #2b2b2b;
+  color: var(--color-text-light);
+  border: 0.0625rem solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-md);
+  padding: 0.85rem 1rem;
+  box-shadow: none;
+}
+
+.clima-info {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 1rem;
+}
+
+.clima-icone {
+  font-size: 2.5rem;
+}
+
+.clima-info h2 {
+  font-size: 1.8rem;
+  justify-self: end;
+}
+
+.clima-info p {
+  font-weight: 700;
+  margin: 0.4rem 0;
+}
+
+.clima-info small {
+  display: block;
+  opacity: 0.9;
+  margin-bottom: 0.5rem;
+}
+
+.operacao-status {
+  display: inline-block;
+  margin-top: 0.35rem;
+  font-size: 0.95rem;
+}
+
+.operacao-normal {
+  color: #57ff00;
+}
+
+.operacao-atencao {
+  color: #ffcc00;
+}
+
+.operacao-alerta {
+  color: #ff4d4d;
+}
+
+.operacao-indisponivel {
+  color: #9ca3af;
+}
+
+.operacao-topo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 700;
+}
+
+.alerta-operacao {
+  padding: 0.9rem 1rem;
+  border-radius: var(--radius-md);
+  margin-bottom: 0.8rem;
+  border-left: 0.3rem solid;
+  width: 100%;
+  max-width: 100%;
+  overflow-wrap: break-word;
+}
+
+.alerta-operacao strong {
+  display: block;
+
+  margin-bottom: 0.35rem;
+
+  font-size: 0.95rem;
+}
+
+.alerta-operacao p {
+  font-size: 0.85rem;
+
+  line-height: 1.4;
+
+  margin: 0;
+}
+
+.alerta-amarela {
+  background: rgba(255, 193, 7, 0.12);
+  border-color: #ffc107;
+}
+
+.alerta-amarela strong {
+  color: #ffc107;
+}
+
+.alerta-vermelha {
+  background: rgba(239, 35, 60, 0.12);
+
+  border-color: var(--color-primary);
+}
+
+.alerta-vermelha strong {
+  color: var(--color-primary);
+}
+
+.estacao-atual-card {
+  background: #2b2b2b;
+  color: var(--color-text-light);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem;
+  box-shadow: var(--shadow-card);
+}
+
+.estacao-atual-card small {
+  color: #bdbdbd;
+  font-weight: 700;
+}
+
+.estacao-linha {
+  margin-top: 0.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.estacao-linha h2 {
+  font-size: clamp(1.5rem, 4vw, 2.2rem);
+  font-weight: 800;
+  line-height: 1;
+  color: var(--color-text-light);
+}
+
+#btn-trocar-sentido {
+  background: var(--color-primary);
+  color: var(--color-text-light);
+  border-radius: var(--radius-pill);
+  padding: 0.75rem 1rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: 0.2s ease;
+}
+
+#btn-trocar-sentido:hover {
+  background: var(--color-primary-dark);
+  transform: translateY(-0.15rem);
+}
+
+#btn-trocar-sentido svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.tabs-linha {
+  display: flex;
+  gap: 0.75rem;
+  background: #2b2b2b;
+  border-radius: var(--radius-lg);
+  padding: 0.5rem;
+}
+
+.tab {
+  flex: 1;
+  padding: 0.8rem;
+  border-radius: var(--radius-pill);
+  background: transparent;
+  color: #bdbdbd;
+  font-weight: 800;
+}
+
+.tab.ativa {
+  background: var(--color-primary);
+  color: var(--color-text-light);
+}
+
+.horarios-section {
+  background: #2b2b2b;
+  border-radius: var(--radius-lg);
+  padding: 1.25rem;
+  box-shadow: var(--shadow-card);
+}
+
+.tempo-chegada {
+  display: block;
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  color: var(--color-primary);
+  line-height: 1;
+}
+
+.horario-previsto {
+  margin-top: 0.5rem;
+  color: #d1d1d1;
+  font-size: 0.9rem;
+}
+
+#proximos-trens-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+}
+
+#proximos-trens-container article {
+  background: #1f1f1f;
+  border: 0.0625rem solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-md);
+  padding: 1rem;
+  text-align: center;
+}
+
+#proximos-trens-container strong {
+  display: block;
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  color: var(--color-primary);
+  line-height: 1;
+}
+
+#proximos-trens-container p {
+  margin-top: 0.5rem;
+  color: #d1d1d1;
+  font-size: 0.9rem;
+}
+
+.mapa-section {
+  background: #2b2b2b;
+  color: var(--color-text-light);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem;
+  box-shadow: var(--shadow-card);
+}
+
+.mapa-section h2 {
+  margin-bottom: 1rem;
+}
+
+.mapa-linha {
+  display: grid;
+}
+
+.estacao-mapa {
+  display: grid;
+  grid-template-columns: 2rem 1fr;
+  gap: 0.75rem;
+  position: relative;
+  min-height: 3rem;
+  color: #ffffff;
+}
+
+.estacao-mapa .ponto {
+  width: 0.85rem;
+  height: 0.85rem;
+  border-radius: 50%;
+  background: var(--color-primary);
+  margin-top: 0.25rem;
+  justify-self: center;
+  z-index: 2;
+}
+
+.estacao-mapa::after {
+  content: "";
+  position: absolute;
+  left: 0.95rem;
+  top: 1.05rem;
+  width: 0.18rem;
+  height: 100%;
+  background: var(--color-primary);
+}
+
+.estacao-mapa:last-child::after {
+  display: none;
+}
+
+.estacao-atual {
+  color: var(--color-text-light);
+  font-weight: 900;
+  padding-bottom: 1.25rem;
+}
+
+.estacao-atual p {
+  font-size: 1.15rem;
+}
+
+.estacao-atual .ponto {
+  width: 1.25rem;
+  height: 1.25rem;
+  background: var(--color-primary);
+  box-shadow: 0 0 0 0.35rem rgba(239, 35, 60, 0.2);
+}
+
+.estacao-passada {
+  color: #7d7d7d;
+}
+
+.estacao-passada .ponto {
+  background: rgba(239, 35, 60, 0.45);
+}
+
+.estacao-passada::after {
+  background: rgba(239, 35, 60, 0.35);
+}
+
+.tag-estacao-atual {
+  display: inline-block;
+  margin-left: 0.5rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: var(--radius-pill);
+  background: rgba(239, 35, 60, 0.15);
+  color: var(--color-primary);
+  font-size: 0.75rem;
+  font-weight: 800;
+}
+
+@media (max-width: 768px) {
+  #proximos-trens-container {
+    grid-template-columns: 1fr;
+  }
+
+  .estacao-linha {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .alerta-operacao {
+    padding: 0.85rem 0.9rem;
+    border-radius: var(--radius-md);
+  }
+
+  .alerta-operacao strong {
+    font-size: 0.9rem;
+  }
+
+  .alerta-operacao p {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .linha-topo {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .btn-voltar {
+    padding: 0.5rem 0.85rem;
+    font-size: 0.9rem;
+  }
+
+  .btn-voltar span:first-child {
+    font-size: 1.1rem;
+  }
+
+  .linha-titulo {
+    width: 100%;
+  }
+
+  .linha-titulo h1 {
+    font-size: 1.3rem;
+    line-height: 1.15;
+  }
+
+  .linha-header-icone {
+    width: 2.6rem;
+    height: 2.6rem;
+  }
+
+  .clima-info {
+    align-items: flex-start;
+  }
+
+  .clima-icone {
+    font-size: 2.7rem;
+  }
+
+  .estacao-atual p {
+    position: relative;
+    padding-right: 5rem;
+  }
+
+  .tag-estacao-atual {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    margin: 0;
+
+    font-size: 0.65rem;
+    padding: 0.15rem 0.45rem;
+
+    white-space: nowrap;
+  }
+
+  .clima-operacao-card,
+  .estacao-atual-card,
+  .tabs-linha,
+  .horarios-section,
+  .mapa-section {
+    border-radius: var(--radius-md);
+    padding: 1rem;
+  }
+
+  .alerta-operacao {
+    padding: 0.8rem;
+    border-left-width: 0.25rem;
+  }
+
+  .alerta-operacao strong {
+    font-size: 0.85rem;
+    line-height: 1.2;
+  }
+
+  .alerta-operacao p {
+    font-size: 0.78rem;
+    line-height: 1.35;
+  }
+}

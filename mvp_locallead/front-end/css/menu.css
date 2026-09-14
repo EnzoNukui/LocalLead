@@ -1,0 +1,91 @@
+.site-header {
+    width: min(var(--container-width), 100% - 2rem);
+    margin-inline: auto;
+    padding: 1rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-weight: 800;
+    font-size: 1.5rem;
+}
+
+.brand-logo {
+    width: 3.25rem;
+    height: 3.25rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.main-nav a {
+    font-weight: 700;
+    opacity: 0.75;
+    transition: 0.2s ease;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+    color: var(--color-primary);
+    opacity: 1;
+}
+
+.main-nav svg {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .main-nav {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 100;
+        background: #2a0000;
+        padding: 0.8rem 1rem;
+        justify-content: space-around;
+    }
+
+    .main-nav svg {
+        display: block;
+        width: 1.3rem;
+        height: 1.3rem;
+    }
+
+    .main-nav a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.2rem;
+        font-size: 0.75rem;
+    }
+
+    body {
+        padding-bottom: 4.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .brand {
+        font-size: 1.25rem;
+    }
+
+    .brand-logo {
+        width: 2.75rem;
+        height: 2.75rem;
+    }
+
+    .main-nav a {
+        font-size: 0.9rem;
+    }
+}
