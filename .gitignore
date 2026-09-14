@@ -1,0 +1,9 @@
+# Dependências instaladas localmente
+node_modules/
+
+# Arquivos gerados pelo sistema operacional e editores
+desktop.ini
+.DS_Store
+
+# Histórico Git preservado fora do monorepositório
+mvp_locallead.git-history/
