@@ -115,8 +115,9 @@ O site conta a história do projeto: o desafio de viajar com pouca previsibilida
 | :---: | :---: |
 | <img src="site-institucional/assets/img/apresentacao/solucao-desktop.png" alt="Página da solução no site institucional" width="430"> | <img src="site-institucional/assets/img/apresentacao/aplicativo-desktop.png" alt="Página de apresentação do aplicativo" width="430"> |
 
-<p align="center"><strong>Equipe</strong></p>
-<p align="center"><img src="site-institucional/assets/img/apresentacao/integrantes-desktop.png" alt="Página Integrantes do site institucional" width="430"></p>
+| Equipe |
+| :---: |
+| <img src="site-institucional/assets/img/apresentacao/integrantes-desktop.png" alt="Página Integrantes do site institucional" width="430"> |
 
 ## Execute na sua máquina
 
